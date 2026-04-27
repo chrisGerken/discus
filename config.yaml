@@ -1,0 +1,25 @@
+known_drives:
+- name: root
+  serial: QGJ965R000914P3300
+  model: Lexar SSD ARES PRO 1TB
+- name: ssd0401
+  serial: 2052DT420203
+  model: WDC  WDS400T2B0A-00SM50
+- name: ssd0402
+  serial: 20504M420433
+  model: SanDisk SDSSDH3 4T00
+- name: ssd0403
+  serial: 20504M420602
+  model: SanDisk SDSSDH3 4T00
+- name: ssd0801
+  serial: S5SSNF0W517655M
+  model: Samsung SSD 870 QVO 8TB
+
+# USB drives — add when connected (run: python3 discus.py --init)
+# - name: curate
+# - name: lifeboat
+# - name: encyclo
+
+thresholds:
+  temperature_warning_c: 55
+  ssd_life_warning_pct: 10

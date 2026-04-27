@@ -1,0 +1,3 @@
+# Detailed daily reports can be large — keep only the running summary
+*.log
+!summary.log
