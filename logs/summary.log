@@ -1,0 +1,15 @@
+[2026-04-27 08:28]  OK    All 5 drives healthy (nvme0n1, sda, sdb, sdc, sdd)
+[2026-04-27 08:32]  OK    All 5 drives healthy (os-drive, ssd0402, ssd0801, ssd0401, ssd0403)
+[2026-04-28 04:00] ALERT  MISSING drive(s): root, ssd0401, ssd0402, ssd0403, ssd0801
+[2026-04-29 04:00] ALERT  MISSING drive(s): root, ssd0401, ssd0402, ssd0403, ssd0801
+[2026-04-30 04:00] ALERT  MISSING drive(s): root, ssd0401, ssd0402, ssd0403, ssd0801
+[2026-05-09 13:34] ALERT  MISSING drive(s): root, ssd0401, ssd0402, ssd0403, ssd0801
+[2026-05-09 13:47] ALERT  MISSING drive(s): root, ssd0401, ssd0402, ssd0403, ssd0801
+[2026-05-09 13:49]  OK    All 8 drives healthy (root, ssd0401, ssd0402, ssd0403, ssd0801, sdc, sdd, sde)
+[2026-05-09 13:54] ALERT  MISSING drive(s): root, ssd0401, ssd0402, ssd0403, ssd0801, Curated, Barco, Elements
+[2026-05-09 13:55]  OK    All 8 drives healthy (root, ssd0401, ssd0402, ssd0403, ssd0801, Curated, Barco, Elements)
+[2026-05-09 14:38] ALERT  MISSING drive(s): root, ssd0401, ssd0402, ssd0403, ssd0801, Curated, Barco, Elements
+[2026-05-09 14:58]  OK    All 8 drives healthy (root, ssd0401, ssd0402, ssd0403, ssd0801, Curated, Barco, Elements)
+[2026-05-10 04:00] ALERT  MISSING drive(s): root, ssd0401, ssd0402, ssd0403, ssd0801, Curated, Barco, Elements
+[2026-05-10 09:00] ALERT  MISSING drive(s): root, ssd0401, ssd0402, ssd0403, ssd0801, Curated, Barco, Elements
+[2026-05-10 09:29] ALERT  MISSING drive(s): root, ssd0401, ssd0402, ssd0403, ssd0801, Curated, Barco, Elements

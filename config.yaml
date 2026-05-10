@@ -14,12 +14,15 @@ known_drives:
 - name: ssd0801
   serial: S5SSNF0W517655M
   model: Samsung SSD 870 QVO 8TB
-
-# USB drives — add when connected (run: python3 discus.py --init)
-# - name: curate
-# - name: lifeboat
-# - name: encyclo
-
+- name: Curated
+  serial: 1NGYT7TT
+  model: WDC WD180EDGZ-11B9PA0
+- name: Barco
+  serial: 3RK0JRYA
+  model: WDC WD180EDGZ-11B2DA0
+- name: Elements
+  serial: 4BGSW8EH
+  model: WDC WD180EDGZ-11B2DA0
 thresholds:
   temperature_warning_c: 55
   ssd_life_warning_pct: 10

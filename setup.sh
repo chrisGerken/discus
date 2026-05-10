@@ -29,13 +29,16 @@ fi
 
 # --- sudoers rule (lets smartctl run without a password, needed for cron) ---
 SUDOERS_FILE="/etc/sudoers.d/discus"
-SUDOERS_LINE="${USER} ALL=(ALL) NOPASSWD: /usr/bin/smartctl"
-if sudo test -f "$SUDOERS_FILE" && sudo grep -q "NOPASSWD.*smartctl" "$SUDOERS_FILE"; then
-    echo "[ok] sudoers rule already present"
+SMARTCTL_PATH="$(realpath "$(which smartctl)")"
+SUDOERS_LINE="${USER} ALL=(ALL) NOPASSWD: ${SMARTCTL_PATH}"
+# Re-write if file is missing OR if the path inside is stale
+if sudo grep -qF "$SUDOERS_LINE" "$SUDOERS_FILE" 2>/dev/null; then
+    echo "[ok] sudoers rule already present (${SMARTCTL_PATH})"
 else
     echo "$SUDOERS_LINE" | sudo tee "$SUDOERS_FILE" > /dev/null
     sudo chmod 440 "$SUDOERS_FILE"
-    echo "[ok] sudoers rule added: ${SUDOERS_FILE}"
+    echo "[ok] sudoers rule written: ${SUDOERS_FILE}"
+    echo "     ${SUDOERS_LINE}"
 fi
 
 # --- cron jobs (daily at 4 am + on every boot) ---

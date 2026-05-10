@@ -57,9 +57,14 @@ def _run_smartctl(device, transport):
         r = subprocess.run(args, capture_output=True, text=True, timeout=60)
         # smartctl exit code is a bitmask; bits 0-1 mean parse/open failure
         if r.returncode & 0x03:
+            # Surface sudo/permission errors so they appear in the daily log
+            err = (r.stderr or r.stdout).strip()
+            if err:
+                print(f"  smartctl error on {device}: {err}", flush=True)
             return None
         return json.loads(r.stdout)
-    except Exception:
+    except Exception as e:
+        print(f"  smartctl exception on {device}: {e}", flush=True)
         return None
 
 
